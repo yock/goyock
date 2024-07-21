@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link href="static/css/style.css" rel="stylesheet">
+    <script src="https://unpkg.com/htmx.org@2.0.1"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <div class="header__logo">
+          <img src="static/img/yockmark.svg">
+        </div>
+      </div>
+      <div class="nav">
+        <ul>
+          <li hx-get="/" hx-swap="innerHTML" hx-target=".content" hx-select=".content">Latest</li>
+          <li hx-get="/archive" hx-swap="innerHTML" hx-target=".content" hx-select=".content">Archive</li>
+        </ul>
+      </div>
+
+			<div class="content" hx-boost="true">
+        {{ block "content" .}}{{end}}
+			</div>
+
+      <div class="mobile-nav">
+        <div id="mobile-nav">
+          <div class="nav">
+            <ul>
+              <li hx-get="/" hx-swap="innerHTML" hx-target=".content" hx-select=".content">Latest</li>
+              <li hx-get="/archive" hx-swap="innerHTML" hx-target=".content" hx-select=".content">Archive</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

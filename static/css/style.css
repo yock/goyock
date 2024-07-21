@@ -1,0 +1,81 @@
+@import url("https://fonts.googleapis.com/css?family=Didact+Gothic|Open+Sans");
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+#container {
+  margin: 10% auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Didact Gothic", sans-serif;
+  font-weight: normal;
+}
+
+p,
+blockquote,
+li {
+  font-family: "Open Sans", sans-serif;
+  font-weight: normal;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5%;
+  & img {
+    height: 150px;
+  }
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+}
+
+.footer {
+  display: flex;
+  align-content: stretch;
+  flex-direction: column;
+  font-size: 1.1em;
+  text-align: center;
+}
+
+.nav ul { display: none; list-style: none; padding: 0px; margin: 0px; font-weight: bold; text-align: center; }
+.nav ul li { display: inline-block; text-align: left; }
+.nav ul li a { display: block; padding: 15px 10px; text-decoration: none; color: #444; }
+.nav ul li a:hover { background-color: #ccc; }
+
+#mobile-nav { display: block; }
+#mobile-nav ul { list-style: none; margin: 0px; padding: 0px; }
+#mobile-nav ul li { list-style: none; text-align: center; }
+#mobile-nav ul li a { display: block; padding: 20px 10px; border-bottom: 1px solid #ccc; text-decoration: none; }
+#mobile-nav ul li a:hover { background-color: #ccc; color: #fff; }
+
+@media all and (min-width:48em){
+
+	.nav ul { display: block; }
+	.anchor-link { display: none; }
+	#mobile-nav { display: none; }
+
+}
+
+.post {
+  max-width: 35em;
+  
+  & > h2, h3, h4, h5, h6 {
+    text-align: center;
+  }
+}
