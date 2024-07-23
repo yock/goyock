@@ -1,3 +1,4 @@
+{{ define "application" }}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -22,7 +23,7 @@
       </div>
 
 			<div class="content" hx-boost="true">
-        {{ block "content" .}}{{end}}
+        {{ template "content" . }}
 			</div>
 
       <div class="mobile-nav">
@@ -38,3 +39,4 @@
     </div>
   </body>
 </html>
+{{ end }}
